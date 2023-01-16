@@ -1,6 +1,8 @@
 ## Dyn-route53 
 
-This script updates a public Route 53 record with a public dynamic IP address that is assigned to your instance or device. For example, this script could run on an EC2 instance with a public IP attached and detect the change 
+#### A scripted alternative to dynamic DNS services
+
+This script updates a public Route 53 record with a public dynamic IP address that is assigned to your instance or device. For example, this script could run on an EC2 instance with a public IP attached and detect the change to the public IP and change a DNS record assigned to it to the desired value. This script can be used to the need to use an Elastic IP. Alternatively, this script can run on any device that has a dynamic IP assigned and needs to be accessed by a known FQDN at all times.
 
 ### Configure your scripts
 
