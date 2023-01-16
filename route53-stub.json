@@ -1,0 +1,17 @@
+{
+    "Changes": [
+      {
+        "Action": "UPSERT",
+        "ResourceRecordSet": {
+          "Name": "replace.withyour.fqdn",
+          "Type": "A",
+          "TTL": 60,
+          "ResourceRecords":[
+              {
+              "Value": "1.1.1.1"
+              }
+        ]
+      }
+    }
+  ]
+}
