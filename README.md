@@ -19,11 +19,11 @@ Additionally, you are welocme to change the "Type" value in in [route53-stub.jso
 
 #### On EC2
 
-3a. Create and attach the policy to the role of your EC2 instance and install the latest [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html). Copy the [update-route53.sh](https://github.com/markosluga/change-route53/blob/main/update-route53.sh) script and [route53-stub.json](https://github.com/markosluga/change-route53/blob/main/route53-stub.json) stub file to your desired location (example in cron below is /home/user/)
+3. a. Create and attach the policy to the role of your EC2 instance and install the latest [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html). Copy the [update-route53.sh](https://github.com/markosluga/change-route53/blob/main/update-route53.sh) script and [route53-stub.json](https://github.com/markosluga/change-route53/blob/main/route53-stub.json) stub file to your desired location (example in cron below is /home/user/)
 
 #### Not on EC2
 
-3b. Create and attach the policy to an IAM user that will be used to call the aws cli. Retrieve the accesses key ID and secret key for the user. Install the latest [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) and configure it with the accesses key ID and secret key. Copy the [update-route53.sh](https://github.com/markosluga/change-route53/blob/main/update-route53.sh) script and [route53-stub.json](https://github.com/markosluga/change-route53/blob/main/route53-stub.json) stub file to your desired location (example in cron below is /home/user/)
+3. b. Create and attach the policy to an IAM user that will be used to call the aws cli. Retrieve the accesses key ID and secret key for the user. Install the latest [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) and configure it with the accesses key ID and secret key. Copy the [update-route53.sh](https://github.com/markosluga/change-route53/blob/main/update-route53.sh) script and [route53-stub.json](https://github.com/markosluga/change-route53/blob/main/route53-stub.json) stub file to your desired location (example in cron below is /home/user/)
 
 ### Configure crontab
 
