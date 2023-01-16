@@ -15,7 +15,7 @@ This script changes an IP from your localhost dynamically.
 
 Additionally, you are welocme to change the "Type" value in in [route53-stub.json](https://github.com/markosluga/change-route53/blob/main/route53-stub.json) as well as the "TTL" value, which can be changed arbitrarily to the number of seconds you prefer, or add any other values as per the [AWS route53 CLI documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/change-resource-record-sets.html).
 
-###Configure crontab
+### Configure crontab
 
 Create a cron job that runs the job based on your IP address change time. For example if your address tends to change at midnight, running the job at 0:05 hours will do the trick. In this case you can run
 ```
