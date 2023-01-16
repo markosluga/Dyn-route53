@@ -13,6 +13,8 @@ This script changes an IP from your localhost dynamically.
      * line 6 as the value for the "Name" key in [route53-stub.json](https://github.com/markosluga/change-route53/blob/main/route53-stub.json) stub file.
 3. Create and attach the policy to an IAM user that will be used to call the aws cli. Retrieve the accesses key ID and secret key for the user. Install the latest [AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) and configure it with the accesses key ID and secret key.
 
+Additionally, you are welocme to change the "Type" value in in [route53-stub.json](https://github.com/markosluga/change-route53/blob/main/route53-stub.json) as well as the "TTL" value, which can be changed arbitrarily to the number of seconds you prefer, or add any other values as per the [AWS route53 CLI documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/change-resource-record-sets.html).
+
 ###Configure crontab
 
 Create a cron job that runs the job based on your IP address change time. For example if your address tends to change at midnight, running the job at 0:05 hours will do the trick. In this case you can run
@@ -23,4 +25,4 @@ and add the following line to the job:
 ```
     5 0 * * * /home/user/update-route53.sh
 ```
-Additionally, you are welocme to change the "Type" value in in [route53-stub.json](https://github.com/markosluga/change-route53/blob/main/route53-stub.json) as well as the "TTL" value, which can be changed arbitrarily to the number of seconds you prefer, or add any other values as per the [AWS route53 CLI documentation](https://awscli.amazonaws.com/v2/documentation/api/latest/reference/route53/change-resource-record-sets.html).
+Make sure to point the job to where your [update-route53.sh](https://github.com/markosluga/change-route53/blob/main/update-route53.sh) script and [route53-stub.json](https://github.com/markosluga/change-route53/blob/main/route53-stub.json) stub file reside.
