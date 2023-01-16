@@ -1,6 +1,6 @@
 ## Dyn-route53 
 
-This script updates a public Route 53 record with a public dynamic IP address that is assigned to your instance or device. For example, this script could run 
+This script updates a public Route 53 record with a public dynamic IP address that is assigned to your instance or device. For example, this script could run on an EC2 instance with a public IP attached and detect the change 
 
 ### Configure your scripts
 
@@ -31,5 +31,9 @@ crontab -e
 and add the following line to the job:
 ```
     5 0 * * * /home/user/update-route53.sh
+```
+Feel free to also configure the cron job to run on startup:
+```
+@reboot  /home/user/update-route53.sh
 ```
 Make sure to point the job to where your [update-route53.sh](https://github.com/markosluga/change-route53/blob/main/update-route53.sh) script and [route53-stub.json](https://github.com/markosluga/change-route53/blob/main/route53-stub.json) stub file reside.
